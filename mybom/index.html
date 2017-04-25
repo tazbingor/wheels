@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装BOM</title>
+    <script src="./myBom.js"></script>
+    <style>
+        body{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<h1>封装BOM</h1>
+<h2>openAtCenter(width, height, url)</h2>
+<button id="btn01">open a window</button>
+<hr />
+<h2>search(name, value)</h2>
+<button id="btn02">search key</button>
+<button id="btn03">set value</button>
+<script>
+    btn01.onclick =function (){
+        $.bom.openAtCenter(500,500,'http://developer.mozilla.org')
+    }
+
+
+    btn02.onclick = function(){
+        console.log($.bom.search('key'));
+
+    }
+
+    btn03.onclick = function(){
+        $.bom.search('key','JavaScript');
+    }
+</script>
+
+</body>
+
+</html>
