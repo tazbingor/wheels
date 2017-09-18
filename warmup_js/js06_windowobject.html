@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+</head>
+<body>
+
+<script>
+
+    //window浏览器中最底层的对象
+    //    alert("这是alert");//提示
+
+//    let result = confirm('你会JS吗?');//确认提示
+//    console.log(result);
+
+//    let name = prompt('你的名字');//输入提示
+//    console.log(name);
+
+    /*定时器*/
+//    window.setTimeout(function(){
+//        console.log('三秒钟到了');
+//    },3000);
+
+    let count = 0;
+    let timer = window.setInterval(function(){
+        count++;
+        if(count > 5){
+            clearInterval(timer);
+            console.log('计时到了');
+            return;
+        }
+        console.log('每一秒闪烁一次:' + count);
+    },1000);
+
+</script>
+
+</body>
+</html>
