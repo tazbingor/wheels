@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS原型与面向对象_01</title>
+</head>
+<body>
+
+<script>
+
+    /*创建对象*/
+    //    var py = new Object(); //创建对象
+    //    py.name ='py';         //添加属性
+    //    py.age=20;
+    //    py.run = function(){
+    //        return this.name + this.age + '运行中';
+    //    }
+    //    alert(box.run());webstorm 主题
+
+
+    /*工厂模式*/
+    //function createObject(name,age){
+    //    var obj = new Object();
+    //
+    //    obj.name = name;
+    //    obj.age = age;
+    //
+    //    obj.run =function(){
+    //        return this.name + this.age + '这是工厂模式'
+    //    }
+    //    return obj;//返回对象的引用
+    //}
+    //
+    //var man_1 = createObject('雷军',30);
+    //var man_2 = createObject('罗永浩',20);
+    //
+    //console.log(man_1.run());
+    //console.log(man_2.run());
+
+
+    /*构造函数*/
+    function School(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.run = function () {
+            return this.name + ',' + this.age;
+        };
+    }
+
+    //    var user1 = new School('雷军', 20);
+    //    var user2 = new School('罗永浩', 20);
+    //    console.log(user1.run());
+    //    console.log(user2.run());
+
+    /*对象冒充*/
+    var obj = new Object();
+    School.call(obj,'乔布斯',100);
+    console.log(obj.run());
+
+</script>
+</body>
+</html>
