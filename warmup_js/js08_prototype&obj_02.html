@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS原型与面向对象_02</title>
+</head>
+<body>
+<script>
+
+    /*构造函数*/
+    function People(userName,userAge){
+        this.name=userName;
+        this.age=userAge;
+
+        this.fxxker = function(){
+          return this.name + this.age;
+        };
+    }
+
+    /*原型*/
+    function Man(){};
+    //原型属性
+    Man.prototype.name = 'phper';
+    Man.prototype.age = 100;
+    //原型方法
+    Man.prototype.run = function(){
+        return this.name + this.age;
+    }
+
+    var goodMan = new Man();
+    var gMan = new Man();
+//    console.log(goodMan.run());
+//    console.log(goodMan.run === gMan.run);
+//    console.log(goodMan.run);
+//    console.log(gMan.run);
+//    console.log(goodMan.run == gMan.run);
+
+    //原型属性
+//    console.log(goodMan.__proto__); //{name: "phper", age: 100, run: ƒ, constructor: ƒ}
+//    alert(goodMan.__proto__);       //[object Object]
+
+    alert(Man.prototype.isPrototypeOf(gMan));       //true
+    console.log(Man.prototype.isPrototypeOf(gMan)); //true
+
+
+</script>
+</body>
+</html>
