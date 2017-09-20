@@ -86,13 +86,14 @@ let dom = {
 
     append: function (parent, children) {
         if (children.length === undefined) {
-            children = [children]
+            children = [children];
         }
         for (let i = 0; i < children.length; i++) {
             parent.appendChild(children[i])
         }
         return parent
     },
+
     prepend: function (parent, children) {
         if (children.length === undefined) {
             children = [children]
