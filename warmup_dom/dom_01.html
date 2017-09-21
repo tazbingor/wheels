@@ -22,30 +22,38 @@
      * */
 
     //Node
-//    function domNode() {
-//        if (typeof Node == 'undefined') {
-//            window.Node = {
-//                ELEMENT_NODE: 1,
-//                ATTRIBUTE_NODE: 2,
-//                CDATA_SECTION_NODE: 4,
-//                ENTITY_REFERENCE_NODE: 5,
-//                ENTITY_NODE: 6,
-//                PROCESSING_INSTRUCETION_NODE: 7,
-//                COMMENT_NODE: 8,
-//                DOCUMENT_NODE: 9,
-//                DOCUMENT_TYPE_NODE: 10,
-//                DOCUMENT_FRAGMENT_NODE: 11,
-//                NOTATION_NODE: 12
-//            };
-//        }
-//    }
+    //    function domNode() {
+    //        if (typeof Node == 'undefined') {
+    //            window.Node = {
+    //                ELEMENT_NODE: 1,
+    //                ATTRIBUTE_NODE: 2,
+    //                CDATA_SECTION_NODE: 4,
+    //                ENTITY_REFERENCE_NODE: 5,
+    //                ENTITY_NODE: 6,
+    //                PROCESSING_INSTRUCETION_NODE: 7,
+    //                COMMENT_NODE: 8,
+    //                DOCUMENT_NODE: 9,
+    //                DOCUMENT_TYPE_NODE: 10,
+    //                DOCUMENT_FRAGMENT_NODE: 11,
+    //                NOTATION_NODE: 12
+    //            };
+    //        }
+    //    }
 
-    window.onload =function(){
+window.onload = function () {
 //      alert(Node);// IE object Node
+//    console.log(document);              //#document
+//    console.log(document.nodeType);     //9
+//    console.log(document.nodeValue);    //null
+//    console.log(document.nodeName);     //#document
+//    console.log(document.childNodes[0]);     //<!DOCTYPE html> ,IE理解为注释
+//    document.title = "天龙八部";
+//    console.log(document.title);
 
-
-
-    };
+    console.log(document.URL);
+    console.log(document.domain);
+    console.log(document.referrer);
+};
 
 </script>
 </body>
