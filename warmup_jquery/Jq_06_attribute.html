@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM</title>
+</head>
+<body>
+
+
+<a href="https://baidu.com" id="a">baidu</a>
+<a href="https://taobao.com" id="b">taobao</a>
+<a href="https://youku.com" id="c">youku</a>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $('#a')
+        .attr('href','https://developer.mozilla.org');
+
+    $('#b')
+        .prop('href','https://www.tmall.com');
+
+</script>
+
+</body>
+</html>
