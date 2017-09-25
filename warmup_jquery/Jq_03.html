@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更改样式</title>
+</head>
+<body>
+
+<div class="a">A</div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+    //    $('.a')
+    //        .css('color','red')
+    //        .css('background','black');
+
+    var classA = $('.a')
+        .css({
+            color: 'red',
+            background: 'black',
+            border: '12px solid gray'
+        })
+        .addClass('aClass');//添加类
+
+//    console.log(classA.hasClass('a'));//判断该类是否存在
+//    console.log(classA.hasClass('b'));
+//    classA.hide();//隐藏
+//    classA.show();//显示
+//    classA.fadeOut();//渐隐
+//    classA.fadeIn();//淡入
+//    classA.slideUp();//向上渐隐
+//    classA.slideDown();
+</script>
+
+</body>
+</html>
