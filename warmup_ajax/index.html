@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        #card {
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<button id="trigger">超级大豆计算机</button>
+<div id="card"></div>
+
+<script src="jquery.js"></script>
+
+<script>
+
+    let trigger = $('#trigger');
+    let card = $('#card');
+    let isLoaded = false;
+    trigger.on('click',
+        function () {
+//            console.log('click');
+            if (card.is(':visible')) {
+                card.slideUp();
+            } else {
+                if (!isLoaded) {
+                    card.load('card.html');
+                    isLoaded = true;
+                }
+                card.slideDown();
+            }
+
+//            card.toggle();
+        }
+    );
+
+</script>
+
+</body>
+</html>
