@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM</title>
+</head>
+<body>
+
+<div class="a">
+    <p>A</p>
+    <span>JS</span>
+</div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+
+    //    var text = $('.a').text();
+    //    console.log(text);
+    //    $('.a').text('Class经典');
+    //    console.log(text);
+
+    var text = $('.a').text();
+    console.log(text);
+
+    var html = $('.a').html();
+    console.log(html);
+
+    $('.a').append('<div>Append</div>');//向后添加元素
+    $('.a').prepend('<div>prepend</div>');//向前添加元素
+
+    $('.a span').remove();//删除指定元素
+</script>
+
+</body>
+</html>
