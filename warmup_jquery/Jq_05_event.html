@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+
+    <style>
+
+        h1 {
+            margin: 0;
+        }
+
+        #card {
+            display: none;
+            background: #eee;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        #card.active {
+            background: #555;
+            color: #fff;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<button id="card-trigger">显示/隐藏公告</button>
+<div id="card">
+    <h1>公告</h1>
+    拉勾网 网站 客户端 移动app 成立四年以来,拉勾以用户体验为核心,专注于为互联网从业者提供精准化专业的招聘服务,同时致力于帮助降低企业端寻觅良才的时间和成本。
+</div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+    let card = $('#card');
+    let cardTirgger = $('#card-trigger');
+
+    cardTirgger.on('click', function () {
+//        console.log("已点击");
+
+            if (card.is(':visible')) {
+                card.slideUp();
+            } else {
+                card.slideDown();
+            }
+
+        }
+    );
+
+    card.on('mouseenter', function () {
+//            if (card.hasClass('active'))
+//                card.removeClass('active');
+//            else
+//                card.addClass('active');
+            card.addClass('active');
+
+        }
+    );
+
+    card.on('mouseleave', function () {
+            card.removeClass('active');
+        }
+    );
+
+</script>
+
+</body>
+</html>
