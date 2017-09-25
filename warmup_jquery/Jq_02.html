@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+</head>
+<body>
+
+
+<style>
+    div {
+        padding: 5px;
+        margin-bottom: 2px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+
+
+<div class="grandpa">
+    <div class="pa">
+        <div id="child1" class="child"></div>
+        <div id="child2" class="child"></div>
+        <div id="child3" class="child not-tt"></div>
+    </div>
+
+
+</div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+
+    //找div下所有的子类元素
+    //    $('div')
+    //        .find('.child')
+    //        .css('border', '2px solid #999')
+
+    //指定grandpa的某个元素
+    //    $('.grandpa')
+    //        .parent('.child')
+    //        .css('border', '2px solid #666');
+
+    //指定#child1
+    $('#child1')
+        .parents('.grandpa')
+        .css('border', '2px solid #444');
+
+    //过滤
+    $('#child3')
+        .filter('.not-tt')
+        .css('background','red');
+
+</script>
+
+</body>
+</html>
